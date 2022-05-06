@@ -9,5 +9,9 @@ input.onButtonPressed(Button.A, function () {
         DFRobotMaqueenPlus.mototStop(Motors.ALL)
         basic.pause(100)
     }
+    DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 40)
+    DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CCW, 40)
+    basic.pause(1000)
+    DFRobotMaqueenPlus.mototStop(Motors.ALL)
 })
 DFRobotMaqueenPlus.I2CInit()
