@@ -15,5 +15,18 @@ input.onButtonPressed(Button.A, function () {
         basic.pause(1000)
         DFRobotMaqueenPlus.mototStop(Motors.ALL)
     }
+    DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 150)
+    DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CCW, 150)
+    basic.pause(100)
+})
+input.onButtonPressed(Button.B, function () {
+    while (true) {
+        DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBL, Color.PINK)
+        basic.pause(850)
+        DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBA, Color.OFF)
+        DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBR, Color.BLUE)
+        basic.pause(850)
+        DFRobotMaqueenPlus.setRGBLight(RGBLight.RGBA, Color.OFF)
+    }
 })
 DFRobotMaqueenPlus.I2CInit()
