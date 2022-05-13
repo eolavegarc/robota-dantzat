@@ -18,6 +18,12 @@ input.onButtonPressed(Button.A, function () {
     DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CW, 150)
     DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CCW, 150)
     basic.pause(100)
+    DFRobotMaqueenPlus.mototStop(Motors.ALL)
+    DFRobotMaqueenPlus.mototRun(Motors.M1, Dir.CCW, 40)
+    basic.pause(100)
+    DFRobotMaqueenPlus.mototRun(Motors.M2, Dir.CCW, 40)
+    basic.pause(100)
+    DFRobotMaqueenPlus.mototStop(Motors.ALL)
 })
 input.onButtonPressed(Button.B, function () {
     while (true) {
